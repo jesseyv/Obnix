@@ -1,0 +1,126 @@
+{% load staticfiles %}
+{% load sitetree %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px;
+        padding-bottom: 40px;
+      }
+    </style>
+    <link href="{% static 'css/bootstrap-responsive.css' %}" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="{% url index %}">Obnix.ru</a>
+          <div class="nav-collapse">
+{#            <ul class="nav">#}
+{#              <li class="active"><a href="#">Главная</a></li>#}
+{#              <li><a href="#contact">Наши услуги</a></li>#}
+{#              <li><a href="#contact">Контакты</a></li>#}
+{#              <li><a href="#about">О нас</a></li>#}
+{#            </ul>#}
+
+              {% sitetree_menu from "topmenu" include "trunk" template "snippets/topmenu.html" %}
+
+          </div><!--/.nav-collapse -->
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="hero-unit">
+        <div class="row">
+            <div class="span2">
+                <img src="{% static 'img/qr.png' %}" style="float: left;" />
+            </div>
+            <div class="span8">
+                <h1>Obnix.ru</h1>
+                <p>Профессиональная помощь Вашему компьютеру!</p>
+                <img src="{% static 'img/phone.png' %}" alt="QR" style="float: left; width: 34px; height: 34px; margin-right: 4px;" /><h2>+7(910)-708-10-37</h2>
+                <p><a class="btn btn-primary btn-large" href="/services/">Услуги &raquo;</a></p>
+            </div>
+        </div>
+      </div>
+
+      <section class="page-content">
+      {% block content %}
+          <div class="row">
+
+            <div class="span4">
+              <h2>Чистка от вирусов</h2>
+               <p>Вирусы могут причинить огромный вред вашему компьютеру, если их не удалить вовремя. Необходимо <b>регулярно</b> проводить полную проверку компьютера на наличие вирусов и других зловредных программ.</p>
+              <p><a class="btn" href="#">Мы знаем как &raquo;</a></p>
+            </div>
+
+            <div class="span4">
+              <h2>Щачло попячсо!</h2>
+              <p>Наши мастера готовы осуществить ремонт Вашей компьютерной техники</p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div>
+
+            <div class="span4">
+              <h2>Ремонт компьютеров</h2>
+               <p>Наши мастера готовы осуществить ремонт Вашей компьютерной техники.</p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+            </div>
+
+            <div class="span12">
+                <table class="table table-bordered table-striped">
+                  <thead>
+                    <tr>
+                      <th>Ремонт</th>
+                      <th>Коллективное бессознательное активно.</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Сознание мгновенно. Коллективное бессознательное прочно аннигилирует материалистический психоз, хотя этот факт нуждается в дальнейшей проверке наблюдением.</td>
+                      <td>Сознание мгновенно. Коллективное бессознательное прочно аннигилирует материалистический психоз, хотя этот факт нуждается в дальнейшей проверке наблюдением.</td>
+                    </tr>
+                  </tbody>
+                </table>
+            </div>
+
+          </div>
+      {% endblock %}
+      </section>
+
+      <hr>
+
+      <footer>
+        <p><a href="{% url index %}" title="Obnix.ru">&copy; Obnix 2012</a></p>
+      </footer>
+
+    </div>
+
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+
+  </body>
+</html>
