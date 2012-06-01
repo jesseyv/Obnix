@@ -1,0 +1,17 @@
+[
+    {
+        "pk": 1, 
+        "model": "flatpages.flatpage", 
+        "fields": {
+            "registration_required": false, 
+            "title": "\u041d\u0430\u0448\u0438 \u0443\u0441\u043b\u0443\u0433\u0438", 
+            "url": "/services/", 
+            "template_name": "", 
+            "sites": [
+                1
+            ], 
+            "content": "<table border=\"0\" cellpadding=\"3\" align=\"center\">\r\n<tbody>\r\n<tr>\r\n<td>\u0444\u0432\u0430</td>\r\n<td>\u0444\u044b</td>\r\n</tr>\r\n<tr>\r\n<td>\u043f\u044b\u0432\u043f</td>\r\n<td>\u043f\u044b\u0432\u043f</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p>\u044b\u0438\u0442\u044b\u0430\u0442</p>", 
+            "enable_comments": false
+        }
+    }
+]
